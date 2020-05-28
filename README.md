@@ -73,7 +73,7 @@ dubbo-reactor 为dubbo调用扩展了reactor模式的支持，可以返回Mono�
         <dependency>
             <groupId>com.bobo</groupId>
             <artifactId>dubbo-reactor</artifactId>
-            <version>0.2.1</version>
+            <version>0.1</version>
         </dependency>
 ```
 然后编写接口
@@ -115,13 +115,4 @@ public class SecretReactorServiceImpl implements SecretReactorService {
     }
 ```
 最后大家看下reactor的组合调用写法，在跟前面2种写法做对比，就会发现reactor在做异步组合调用的好处了
-
-# 版本更新
-0.2.1 版本
-
-增加了Log的打印，如果出现dubbo返回的Future非预期的FutureAdapter或者future完成回调的结果非预期的DecodeableRpcResult，会打印警告日志
-
-0.2 版本
-1. 增加了对Flux类型的支持，跟Mono一样，正常在接口返回类型声明即可
-2. 整体代码重构
 
